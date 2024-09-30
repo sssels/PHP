@@ -1,1 +1,19 @@
-
+<?php
+echo "Merhaba";
+echo 'Selen\'in bilgisayarı';
+$a = 1;
+$b = 2;
+echo $a;
+echo $b;
+$c=$a;
+$a=$b;
+$b=$c;
+echo $a;
+echo $b;
+$d = 0b1101;
+echo $d;
+$fiyat=1500;
+echo "Bilgisayar {$fiyat}TL";
+$e=1500;
+var_dump($e);
+?>
