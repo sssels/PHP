@@ -1,1 +1,67 @@
 
+<?php
+/*$i = 1;
+while ($i < 6) {
+  echo $i;
+  $i++;
+}
+echo $i;*/
+
+/*$x=10;
+$y=10;
+$a=0;
+while ($x*$x+ $y*$y > 25) {
+	$x=rand(-5,5);
+    $y=rand(-5,5);
+    $a++;    
+}
+echo "$a seferde bulundu ($x,$y)" ;*/
+
+
+/*$deneme=0;
+do {
+	$x=rand(-5,5);
+    $y=rand(-5,5);
+    $deneme++;
+} while ($x*$x+$y*$y > 25);
+echo "$deneme seferde bulundu ($x,$y)";*/
+
+/*for ($x = 0; $x <= 10; $x++) {
+  echo "The number is: $x <br>"; // <br> alt satıra geç demek.
+}*/
+
+/*$toplam=0;
+for ($x=1; $x <= 10; $x++) {
+	$sayi=rand(0,100);
+    echo "$sayi <br>";
+    $toplam+=$sayi;
+};
+echo "Toplam=$toplam <br> ";
+$ortalama = $toplam /10;
+echo "Ortalama = $ortalama <br>";*/
+
+/*for ($x = 0; $x < 10; $x++) {
+  if ($x == 4) {
+    continue;
+  }
+  echo "The number is: $x <br>";
+}*/
+
+/*$x=rand(1,100);
+if($x%2==0){
+	echo "$x, 2 ile tam bölünüyor. <br>";
+} else {
+	echo "$x, 2 ile tam bölünmüyor. <br>";
+};*/
+$x=rand(0,23);
+if(4<=$x and $x<12){
+	echo "$x <br>";
+    echo "Günaydın. <br>";
+} elseif(12<=$x and $x<17){
+	echo "$x <br>";
+    echo "İyi günler. <br>";
+} else {
+	echo "$x <br>";
+    echo "İyi akşamlar.";
+}
+?>
