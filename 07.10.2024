@@ -13,7 +13,28 @@ $eyüp = ["ad" => "Eyüp", "soyad" => "Küçükkara", "yas" => 26, "email" => "e
 $kisiler = [$emrah, $nilgün, $eyüp];
 echo "Merhaba " . $kisiler[1]["ad"];*/
 
-$a = ["emrah" , "tuba", "seher", "hasan"];
+/*$e = ["ad" => "Emrah", "yas" => 50];
+$n = ["ad" => "Nilgün", "yas" => 24];
+$m = ["ad" => "Merve", "yas" => 23];
+$kisiler = [$e, $n, $m];
+foreach ($kisiler as $kisi){
+echo "Merhaba {$kisi["ad"]} sen {$kisi["yas"]} yaşındasın.";
+}*/
+
+
+/*$isimler = ["emrah" , "tuba", "seher", "hasan"];
 $i = rand(0,count($a)-1);
-echo "Merhaba " . $a[$i];
+echo "Merhaba " . $a[$i];*/
+/*foreach ($isimler as $i => $isim){
+	echo "Merhaba " . $isim;
+}*/
+
+$renkler = ["kırmızı", "mavi", "sarı"];
+foreach($renkler as $r){
+echo $r;
+}
+$renkler[] = "yeşil"; //array e ilave
+$renkler[0] = "pembe"; //0. rengi pembe ile güncelledik.
+
+var_dump($renkler);
 ?>
