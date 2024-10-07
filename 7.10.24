@@ -1,0 +1,19 @@
+
+<?php
+/*$isimler= ["Emrah","Merve","Eyüp","Nilgün"];  //array
+$isimler1 = ["Emrah","Merve","Eyüp",["elma","armut","kavun","karpuz"], "Selen"];
+$isimler =[2 => "Emrah",4 => "Merve","Eyüp",8 => "Nilgün"];
+$isimler = array("","") -> array tanımlamanın başka yolu
+echo "Merhaba " . $a; -> nokta işareti stringleri birleştirmek için kullanılır.
+var_dump($isimler1);
+echo "Merhaba " . $isimler1[3][2];
+$emrah = ["ad" => "Emrah", "soyad" => "Akyar", "yas" => 50, "email" => "eakyar@eskisehir.edu.tr"];
+$nilgün = ["ad" => "Nilgün", "soyad" => "Özkaya", "yas" => 25, "email" => "nilgün@eskisehir.edu.tr"];
+$eyüp = ["ad" => "Eyüp", "soyad" => "Küçükkara", "yas" => 26, "email" => "eyup@eskisehir.edu.tr"];
+$kisiler = [$emrah, $nilgün, $eyüp];
+echo "Merhaba " . $kisiler[1]["ad"];*/
+
+$a = ["emrah" , "tuba", "seher", "hasan"];
+$i = rand(0,count($a)-1);
+echo "Merhaba " . $a[$i];
+?>
