@@ -7,13 +7,15 @@
     <body>
         <h1>HTML'ye Giriş</h1>
         <h2>Paragraflar</h2>
-    <p>Merhaba arkadaşlar.<br>
+    <p>Merhaba <b>arkadaşlar</b>.<br>
     Nasılsınız?
-    Bugünkü dersimizde HTML öğreneceğiz.</p>
+    Bugünkü dersimizde <strong>HTML</strong> öğreneceğiz.</p>
 
-    <p>Bu da bizim ikinci paragrafımız. Paragrafın nasıl
-        başladığına dikkat edin.</p>
+    <p>Bu da bizim <i>ikinci paragrafımız</i>. Paragrafın nasıl
+        başladığına <small>dikkat</small> edin.</p>
+
+    <p>x<sub>10</sub></p>
+    <p>x<sup>2</sup></p>
     </body>
 </html>
-
 
