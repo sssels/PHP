@@ -1,1 +1,19 @@
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>HTML'ye Giriş</h1>
+        <h2>Paragraflar</h2>
+    <p>Merhaba arkadaşlar.<br>
+    Nasılsınız?
+    Bugünkü dersimizde HTML öğreneceğiz.</p>
+
+    <p>Bu da bizim ikinci paragrafımız. Paragrafın nasıl
+        başladığına dikkat edin.</p>
+    </body>
+</html>
+
+
