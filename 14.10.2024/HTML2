@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1>Derse Kayıtlı Öğrenciler</h1>
+<ol>
+    <li>Seher</li>
+    <ol>
+        <li>Elma</li>
+        <li>Armut</li>
+        <li>Kavun</li>
+        <li>Karpuz</li>
+    </ol>
+    <li>Hafize</li>
+    <ul>
+        <li>Elma</li>
+        <li>Armut</li>
+        <li>Kavun</li>
+        <li>Karpuz</li>        
+    </ul>
+    <li>Nilgün</li>
+    <li>Tuba</li>
+</ol>
+
+    <h1>Sevdiğim meyveler</h1>
+    <ul>
+        <li>Elma</li>
+        <ul>
+            <li>Amasya</li>
+            <li>Starking</li>
+            <li>Golden</li>
+        </ul>
+        <li>Armut</li>
+        <li>Kiraz</li>
+        <li>Muz</li>
+    </ul>
+</body>
+
+</html>
