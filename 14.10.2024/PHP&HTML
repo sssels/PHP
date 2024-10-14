@@ -1,0 +1,22 @@
+<?php
+    $a=rand(1,100);
+    echo $a;
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+    </head>
+    <body>
+        <p>Hoş geldiniz</p>
+        <p>Bugün günlerden 
+            <?php
+            $mydate=getdate();
+            $gun=$mydate["wday"];
+            $gunler=["pazartesi","salı","çarşamba","perşembe","cuma","cumartesi","pazar"];
+            echo $gunler[$gun-1];
+            ?>
+        </p>
+    </body>
+
+</html>
