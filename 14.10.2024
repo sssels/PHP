@@ -1,0 +1,34 @@
+<?php
+/*$gunler = ["pazartesi","salı","çarşamba","perşembe","cuma","cumartesi","pazar"];
+$i=rand(0,6);
+echo "Merhaba bugün " . $gunler[$i];*/
+
+
+/*$i=rand(0,6);
+switch($i){
+case 0:
+echo "Merhaba bugün pazartesi";
+break;
+case 1:
+echo "Merhaba bugün salı";
+break;
+case 2:
+echo "Merhaba bugün çarşamba";
+break;
+case 3:
+echo "Merhaba bugün perşembe";
+break;
+case 4:
+echo "Merhaba bugün cuma";
+break;
+case 5:
+echo "Merhaba bugün cumartesi";
+break;
+default:
+echo "Merhaba bugün pazar";
+}*/
+
+$a=1;
+$b = $a < 10 ? "Hello" : "Goodbye";
+echo $b;
+?>
