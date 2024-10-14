@@ -1,0 +1,21 @@
+<?php
+    $a=30
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+    </head>
+    <body>
+        <p> Hoş geldiniz.
+        	<?=$a?>
+            <?php
+            $tarih=getdate();
+            $yil=$tarih["year"];
+            $yas=$yil-1999;
+            echo $yas . " yaşındasınız.";
+            ?>
+        </p>
+    </body>
+
+</html>
