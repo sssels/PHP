@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <?php
+    $gelen = $_GET;
+    var_dump($gelen);
+    if ( isset($gelen["isim"]) ){
+        $ad = $gelen["isim"]; }
+    else {
+        $ad="bilinmeyen kişi"; };
+    echo "Hoş geldin <b>" . $ad . "</b>";
+    ?>
+</body>
+
+</html>
