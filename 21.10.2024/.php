@@ -13,10 +13,11 @@
         <nav>
             <a href="/sayfalar/sayfa2.html">Anasayfa</a>
             <a href="https://www.tmo.gov.tr/" target="_blank">TMO</a>
+            <a href="#alt">En alta git </a>
         </nav>
         <main>
             <article>
-                <h2>İnsana Faydaları</h2>
+                <h2 id="ust">İnsana Faydaları</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget odio nec massa ultricies volutpat. 
                     Cras suscipit commodo enim. Sed non suscipit mauris, id scelerisque nisi. 
                     Phasellus arcu nibh, maximus et feugiat et, tempus euismod mi. 
@@ -44,8 +45,8 @@
                 Reklamlar
             </aside>
         </main>
-        <footer>
-            (C) Emrah Akyar
+        <footer id="alt">
+            (C) <a href="mailto:eakyar@eskisehir.edu.tr">Emrah Akyar</a> <a href="#ust">Üste git</a>
         </footer>
     </body>
 </html>
