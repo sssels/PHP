@@ -11,7 +11,8 @@
             <h1>Fasulyenin Faydaları</h1>
         </header>
         <nav>
-            Anasayfa TMO
+            <a href="/sayfalar/sayfa2.html">Anasayfa</a>
+            <a href="https://www.tmo.gov.tr/" target="_blank">TMO</a>
         </nav>
         <main>
             <article>
