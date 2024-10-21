@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+$a=rand(1,100);
+?>
 <html>
     <head>
         <title>Benim Web Sayfam</title>
@@ -18,6 +21,7 @@
         <main>
             <article>
                 <h2 id="ust">İnsana Faydaları</h2>
+                <?php if($a<50):?>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget odio nec massa ultricies volutpat. 
                     Cras suscipit commodo enim. Sed non suscipit mauris, id scelerisque nisi. 
                     Phasellus arcu nibh, maximus et feugiat et, tempus euismod mi. 
@@ -25,6 +29,7 @@
                     Vestibulum iaculis nulla nec nulla hendrerit, nec euismod est aliquam. Aenean mauris felis, consectetur in arcu a, elementum congue lorem. 
                     Suspendisse sed porttitor dolor, non auctor lorem. Proin id tortor dui. Nullam scelerisque elit sit amet leo ultrices, 
                     id placerat elit pellentesque. Nulla ut massa vitae nunc pulvinar pretium eu a sapien</p>
+                <?php endif ?>
                 <p>Curabitur sem metus, venenatis nec convallis et, mollis quis turpis. 
                     Curabitur ut sodales massa, non porta lorem. Morbi molestie volutpat erat, sed tristique sapien efficitur quis. 
                     Etiam facilisis eu tortor non volutpat. Suspendisse condimentum mattis odio, in sagittis massa consectetur ac. 
