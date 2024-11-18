@@ -19,6 +19,7 @@ echo "Şifreler uyumsuz, tekrar dene.";
         <form>
             <div>Adı Soyadı <input type="text" name="adi-soyadi"></div>
             <div>Adres <textarea name="adres" rows="10" cols="30"></textarea></div>
+            <div>Doğum Tarihi <input type="date"</div>
             <div>Şifre <input type="password" name="sifre1"></div>
             <div>Şifre tekrar <input type="password" name="sifre2"></div>
             <div><input type="submit" value="Gönder"></div>
