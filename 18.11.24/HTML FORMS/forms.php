@@ -22,12 +22,6 @@ echo "Şifreler uyumsuz, tekrar dene.";
             <div>Şifre <input type="password" name="sifre1"></div>
             <div>Şifre tekrar <input type="password" name="sifre2"></div>
             <div><input type="submit" value="Gönder"></div>
-            <?php
-            if ($sifre1==$sifre2){
-            echo "Kayıt tamamlandı";}
-            else{ 
-            echo "Şifreler uyumsuz, tekrar dene.";}
-            ?>
         </form>
 
     </body>
