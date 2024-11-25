@@ -1,0 +1,20 @@
+<?php 
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    require 'includes/database.php';
+    $sql = "INSERT INTO article(title,content) VALUES('" . $_POST["title"] ." ' , '" . $_POST["content"] ."' )";
+    echo $sql;
+}
+?>
+<!DOCTYPE html>
+<html>
+    <?php require "includes/header.html";?>
+    <body>
+        <h1>New Article</h1>
+        <form method = "POST">
+            <div><label for ="title">Title</label><input type="text" name ="title" id="title"></div>
+            <div><label for ="content">content</label><textarea name ="content" id="content" rows="10" cols="30"></textarea></div>
+            <div><input type="submit" value="Save"></div>
+        </form>
+
+    </body>
+</html>
