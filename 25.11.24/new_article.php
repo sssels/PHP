@@ -1,7 +1,8 @@
 <?php 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     require 'includes/database.php';
-    $sql = "INSERT INTO article(title,content) VALUES('" . $_POST["title"] ." ' , '" . $_POST["content"] ."' )";
+    $sql = "INSERT INTO article(title,content) VALUES('" . mysqli_escape_string($conn,$_POST["title"]) ." ' ,
+     '" . mysqli_escape_string($conn,$_POST["content"]) ."' )";
     echo $sql;
     $results = mysqli_query($conn,$sql);
     if ($results==false){
