@@ -3,6 +3,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     require 'includes/database.php';
     $sql = "INSERT INTO article(title,content) VALUES('" . $_POST["title"] ." ' , '" . $_POST["content"] ."' )";
     echo $sql;
+    $results = mysqli_query($conn,$sql);
+    if ($results==false){
+        echo mysqli_error($conn);
+    }
+    else { //hata olmadı kaydetti
+        $id=mysqli_insert_id($conn);
+        echo "Kaydınız {$id} kayıt numarasıyla oluşturuldu";
+    }
 }
 ?>
 <!DOCTYPE html>
