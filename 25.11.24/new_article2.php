@@ -1,4 +1,6 @@
 <?php 
+echo "<p>" . $_SERVER["REMOTE_ADDR"] . "<p>"; //Bağlanan kişinin ip adresini görüntülemeye yarıyor.
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     require 'includes/database.php';
 
