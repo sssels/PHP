@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<?php require "includes/header.html"; ?>
+<body>
+    <?php
+    require "includes/database.php";
+    require "includes/article.php";
+
+    $conn = getDB();
+    
+    $gelen = $_GET;
+    $gelenid = $gelen["id"];
+    $article = getArticle($conn, $gelenid);
+    echo "<h1>" . $article["title"] . "</h1>";
+    echo "<p>" . $article["content"] . "</p>";
+    echo "<p>" . $article["published_at"] . "</p>";
+    ?>
+</body>
+
+</html>
