@@ -1,0 +1,52 @@
+<?php
+    $title = "";
+    $content = "";
+//Eğer post metoduyla bir veri geldiyse...
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $title = $_POST["title"];
+    $title=htmlspecialchars($title);
+    $content = $_POST["content"];
+    $content=htmlspecialchars($content);
+    
+    require 'includes/article.php';
+    $errors = validateArticle($title,$content);
+
+
+    require 'includes/database.php';
+
+    $conn = getDB();
+
+    if (empty($errors)) {
+        $sql = "INSERT INTO article(title,content) VALUES (?, ?)";
+        $stmt = mysqli_prepare($conn, $sql);
+        if ($stmt == false)
+            echo mysqli_error($conn);
+        else {
+            //sql komutuna parametreleri bağla
+            mysqli_stmt_bind_param($stmt, "ss", $title, $content);
+            //sql komutunu çalıştır
+            if (mysqli_stmt_execute($stmt)) { //Hata yok
+                $id = mysqli_insert_id($conn);
+                echo "<p>Kaydınız {$id} kayıt numarasıyla oluşturuldu.</p>";
+                header("Location: /article.php?id={$id}");
+                exit;
+            } else //hata var
+                echo mysqli_stmt_error($stmt);
+        }
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<?php require "includes/header.html"; ?>
+
+<body>
+    <h1>New Article</h1>
+    <?php
+    require 'includes/article-form.php';
+    ?>
+</body>
+
+</html>
