@@ -1,0 +1,45 @@
+<?php
+include 'includes/database.php';
+include 'includes/article.php';
+
+$conn = getDB();
+
+if (isset($_GET['id'])) {
+
+    $article = getArticle($conn, $_GET['id']);
+    if (!empty($article)) {
+        $id = $article['id'];
+        $title = $article['title'];
+        $content = $article['content'];
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD']=="POST"){
+
+    $sql = "DELETE from article WHERE id=?";
+    $stmt = mysqli_prepare($conn, $sql);
+    if ($stmt == false) {
+        echo mysqli_error($conn);
+    } else {
+        mysqli_stmt_bind_param($stmt, "i", $id);
+        if (mysqli_stmt_execute($stmt)) {
+            header("Location: /");
+            exit;
+        } else {
+            echo mysqli_stmt_error($stmt);
+        }
+    }
+}
+
+
+?>
+<h1>Delete Article</h1>
+<form method="POST">
+    <?php
+    if (!empty($title)) {
+        echo "<h2>" . $title . " başlıklı makaleyi silmek istediğine emin misin?</h2>";
+    }
+    ?>
+    <input type="submit" value="Delete">
+    <a href="/">Cancel</a>
+</form>
