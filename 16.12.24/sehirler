@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<?php require "includes/header.html";?>
+
+<body>
+    <h1>Welcome to My BLOG!</h1>
+    <?php
+
+mysqli_report(MYSQLI_REPORT_OFF); //MySQL de hatalara rağmen devam et
+ini_set('display_errors', 0); //PHP de hata mesajlarını gösterme
+$db_host = "localhost"; //internet adresi
+$db_name = "world"; //veri tabanının adı
+$db_user = "ahmet"; //kullanıcı adı
+$db_pass = "ahmet123"; //kullanıcı şifresi
+//mysqli_connect fonksiyonu veritabanına bağlanmak için
+//bu fonksiyon true verirse bağlanıldı.
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+if($conn==false)
+{
+    echo mysqli_connect_error();
+    exit;
+}
+
+    $sql = "SELECT * FROM cities WHERE country_id=225";
+
+    $results = mysqli_query($conn, $sql);
+    if ($results == false) {
+        echo "sorgu çalıştırılamadı<br>";
+        echo mysqli_error($conn); //Hata mesajını yaz
+    } else {
+        echo "sorgu çalıştırıldı<br>";
+        $cities = mysqli_fetch_all($results, MYSQLI_ASSOC);
+        if (count($cities) == 0)
+            echo "Kayıt bulunamadı";
+        else {
+            echo "<ul>";
+            foreach ($cities as $city) {
+                echo "<li>" . 
+                $city["name"] . 
+                " " . 
+                $city["latitude"] . 
+                " , " . 
+                $city["longitude"] ."</li>";
+            }
+            echo "</ul>";
+        }
+    }
+    ?>
+</body>
+
+</html>
