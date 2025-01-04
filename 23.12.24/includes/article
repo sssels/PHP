@@ -1,0 +1,48 @@
+<?php
+/**
+ * Verilen id numarasına ait makalenin bilgilerini getir
+ * @param object $conn veritabanı bağlantısı
+ * @param integer $id makalenin ID numarası
+ * @return mixed Makale ile bilgileri içeren array
+ */
+function getArticle($conn,$id){
+    $sql = "SELECT * from article WHERE id = ?";
+    $stmt = mysqli_prepare($conn,$sql);
+    if ($stmt==false){
+        echo mysqli_error($conn);
+    }
+    else {
+        mysqli_stmt_bind_param($stmt,"i",$id);
+        if ( mysqli_stmt_execute($stmt) ){
+            $result = mysqli_stmt_get_result($stmt);
+            return mysqli_fetch_array($result,MYSQLI_ASSOC);
+        }
+    }
+
+}
+
+
+/**
+ * Gönderilen bir formun bilgilerini kontrol eder
+ *
+ * @param  string $title
+ * @param  string $content
+ * @return array
+ */
+function validateArticle($title,$content){
+    $errors = [];
+    if (empty($title)) {
+        $errors[] = "Başlık gerekli";
+    }
+    if (empty($content)) {
+        $errors[] = "İçerik gerekli";
+    }
+    if (strlen($title) < 3) {
+        $errors[] = "Başlık en az 3 karakter olmalı";
+    }
+    return $errors;
+}
+
+
+
+?>
