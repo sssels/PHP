@@ -1,0 +1,22 @@
+<?php
+/**
+ * Get database connection
+ * @return object Connection to a MySQL server
+ */
+function getDB()
+{
+    mysqli_report(MYSQLI_REPORT_OFF); //MySQL de hatalara rağmen devam et
+    ini_set('display_errors', 0); //PHP de hata mesajlarını gösterme
+    $db_host = "localhost"; //internet adresi
+    $db_name = "cms"; //veri tabanının adı
+    $db_user = "cms_www"; //kullanıcı adı
+    $db_pass = "cms123"; //kullanıcı şifresi
+    //mysqli_connect fonksiyonu veritabanına bağlanmak için
+    //bu fonksiyon true verirse bağlanıldı.
+    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    if ($conn == false) {
+        echo mysqli_connect_error();
+        exit;
+    }
+    return $conn;
+}
