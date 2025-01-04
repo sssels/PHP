@@ -1,0 +1,42 @@
+<?php
+require 'includes/database.php';
+require 'includes/article.php';
+
+$conn = getDB();
+if (isset($_GET['id'])) {
+
+    $article = getArticle($conn, $_GET['id']);
+    if (!empty($article)) {
+        $id = $article['id'];
+        $title = $article['title'];
+        $content = $article['content'];
+    }
+    
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $errors = validateArticle($title, $content);
+
+        if (empty($errors)) {
+            $sql = "UPDATE article SET title=?, content=? WHERE id=?";
+            $stmt = mysqli_prepare($conn, $sql);
+            if ($stmt == false) {
+                echo mysqli_error($conn);
+            } else {
+                mysqli_stmt_bind_param($stmt, "ssi", $title, $content, $id);
+                if (mysqli_stmt_execute($stmt)) {
+                    header("Location: /article.php?id={$id}");
+                    exit;
+                } else {
+                    echo mysqli_stmt_error($stmt);
+                }
+            }
+        }
+    }
+}
+?>
+
+<h2>Edit Article</h2>
+<?php
+  require 'includes/article-form.php';
+?>
